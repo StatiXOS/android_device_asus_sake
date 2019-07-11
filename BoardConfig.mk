@@ -143,6 +143,9 @@ TARGET_COPY_OUT_ODM := odm
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := /proc/driver/dclick
+
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
