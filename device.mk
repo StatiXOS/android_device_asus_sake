@@ -252,6 +252,7 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     SystemUIResCommon \
     TelephonyResCommon \
+    TetheringResCommon \
     WifiResCommon \
     WifiResTarget \
     ZenFone8Frameworks \
