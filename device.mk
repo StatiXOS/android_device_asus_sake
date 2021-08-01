@@ -68,6 +68,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := lahaina
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
