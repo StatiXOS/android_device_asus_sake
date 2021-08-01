@@ -53,3 +53,6 @@ PRODUCT_BOARD_PLATFORM := lahaina
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
+
+# Vendor
+$(call inherit-product, vendor/asus/sake/sake-vendor.mk)
