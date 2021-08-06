@@ -115,3 +115,6 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_F2FS := true
+
+# SELinux
+include device/qcom/sepolicy_vndr/SEPolicy.mk
