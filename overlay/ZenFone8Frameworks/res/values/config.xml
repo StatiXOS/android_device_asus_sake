@@ -89,6 +89,9 @@
         <item>50000</item>
     </integer-array>
 
+     <!-- Shows the required view for in-display fingerprint -->
+     <bool name="config_supportsInDisplayFingerprint">true</bool>
+
     <!-- Array of desired screen brightness in nits corresponding to the lux values
          in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
          config_screenBrightnessMaximumNits, the display brightness is defined as the measured
