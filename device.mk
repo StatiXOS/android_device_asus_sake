@@ -139,7 +139,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.qti \
-    android.hardware.renderscript@1.0-impl \
     libtinyxml \
     lights.qcom
 
