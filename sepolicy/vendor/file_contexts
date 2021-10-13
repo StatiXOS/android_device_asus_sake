@@ -13,9 +13,15 @@
 /data/vendor/goodix/gf_data(/.*)?    u:object_r:vendor_goodix_data_file:s0
 /dev/goodix_fp                       u:object_r:fingerprint_device:s0
 
+# NFC
+/vendor/bin/hw/android\.hardware\.nfc@1\.2-service     u:object_r:hal_nfc_default_exec:s0
+
 # Partitions
 /dev/block/platform/soc/1d84000\.ufshc/by-name/asusfw_[ab]    u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/xrom_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+
+# Secure element
+/vendor/bin/hw/android\.hardware\.secure_element@1\.2-service    u:object_r:hal_secure_element_default_exec:s0
 
 # Sensors
 /dev/asus2ndAccelSensor     u:object_r:sensors_device:s0
