@@ -240,23 +240,23 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # NFC
-$(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
-$(call inherit-product, vendor/nxp/opensource/pn5xx/halimpl/nfc_vendor_product.mk)
-
-USES_NQ_NFC := true
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service \
+    NfcNci \
+    com.android.nfc_extras \
+    libchrome.vendor \
+    SecureElement \
+    Tag \
+    android.hardware.secure_element@1.2-service
 
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/android.hardware.nfc.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_eSE/android.hardware.se.omapi.ese.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
 
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0:64 \
-    ls_nq_client:64 \
-    jcos_nq_client:64 \
-    vendor.nxp.nxpnfc@1.0.vendor
-
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/pn5xx
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
