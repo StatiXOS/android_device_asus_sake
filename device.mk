@@ -96,6 +96,13 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
+# AOSP Blur
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.disable_backpressure=1 \
+    debug.sf.latch_unsignaled=1
+
+TARGET_USES_BLUR := true
+
 # Boot Control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
