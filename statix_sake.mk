@@ -18,7 +18,7 @@ $(call inherit-product, vendor/statix/config/gsm.mk)
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := sake
 PRODUCT_MANUFACTURER := ASUS
-PRODUCT_MODEL := StatiXOS on ZenFone 8
+PRODUCT_MODEL := ZenFone 8
 PRODUCT_NAME := statix_sake
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
