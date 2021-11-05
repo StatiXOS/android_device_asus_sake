@@ -123,7 +123,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
 KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
-KERNEL_LD := LD=$(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin/aarch64-elf-ld.lld
+KERNEL_LD := LD=$(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin/aarch64-elf-ld.bfd
 TARGET_KERNEL_CONFIG := vendor/$(PRODUCT_DEVICE)_defconfig
 TARGET_KERNEL_SOURCE := kernel/asus/sm8350
 
