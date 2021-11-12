@@ -5,6 +5,12 @@
 #
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+BUILD_BROKEN_DUP_SYSPROP := true
+
+SELINUX_IGNORE_NEVERALLOWS := true
 
 DEVICE_PATH := device/asus/sake
 
@@ -98,6 +104,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.selinux=permissive \
     cgroup.memory=nokmem,nosocket \
     console=ttyMSM0,115200n8 \
     ip6table_raw.raw_before_defrag=1 \
