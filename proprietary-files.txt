@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from ZenFone 8 (30.12.112.22). OTAs to extract from can be found here:
+## are from ZenFone 8 (31.1004.0404.73). OTAs to extract from can be found here:
 ## https://www.asus.com/Mobile/Phones/ZenFone/Zenfone-8/HelpDesk_BIOS/
 
 # ADSPRPC
@@ -281,7 +281,7 @@ vendor/lib64/libstagefright_soft_qtiflacdec.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Bluetooth
--system/app/aptxals/aptxals.apk
+-system_ext/priv-app/aptxals/aptxals.apk
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
@@ -350,8 +350,6 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
-vendor/etc/cne/profileSlm.xml
-vendor/etc/cne/slm.conf
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/etc/init/mutualex.rc
@@ -930,13 +928,6 @@ system_ext/etc/permissions/izat.xt.srv.xml
 system_ext/etc/permissions/privapp-permissions-com.qualcomm.location.xml
 -system_ext/framework/com.qti.location.sdk.jar
 -system_ext/framework/izat.xt.srv.jar
-system_ext/lib64/vendor.qti.gnss@1.0.so
-system_ext/lib64/vendor.qti.gnss@1.1.so
-system_ext/lib64/vendor.qti.gnss@1.2.so
-system_ext/lib64/vendor.qti.gnss@2.0.so
-system_ext/lib64/vendor.qti.gnss@2.1.so
-system_ext/lib64/vendor.qti.gnss@3.0.so
-system_ext/lib64/vendor.qti.gnss@4.0.so
 -system_ext/priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/garden_app
 vendor/bin/loc_launcher
@@ -1253,7 +1244,6 @@ vendor/lib64/libsoc_helper.so
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
-system_ext/etc/permissions/telephonyservice.xml
 -system_ext/framework/qcrilhook.jar
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/hw/qcrilNrd
@@ -1261,8 +1251,8 @@ vendor/bin/qtigetprop
 vendor/bin/qtisetprop
 vendor/etc/init/init-qcril-data.rc
 vendor/etc/init/qcrilNrd.rc
-vendor/etc/qcril_database/upgrade/config/config/6.0_config.sql
-vendor/etc/qcril_database/upgrade/config/config/7.0_config.sql
+vendor/etc/qcril_database/upgrade/config/6.0_config.sql
+vendor/etc/qcril_database/upgrade/config/7.0_config.sql
 vendor/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql
@@ -1535,9 +1525,7 @@ vendor/lib64/vendor.qti.hardware.eid@1.0.so
 
 # SecureMSM (GPQESE)
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-vendor/bin/hw/vendor.qti.secure_element@1.2-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
-vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 vendor/firmware/image/eseservice.b00
 vendor/firmware/image/eseservice.b01
 vendor/firmware/image/eseservice.b02
@@ -1559,7 +1547,6 @@ vendor/firmware/image/gpqese.b07
 vendor/firmware/image/gpqese.mbn
 vendor/firmware/image/gpqese.mdt
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-vendor/lib64/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
