@@ -275,7 +275,8 @@ PRODUCT_PACKAGES += \
     WifiResTarget \
     ZenFone8Frameworks \
     ZenFone8Snap \
-    ZenFone8SystemUI
+    ZenFone8SystemUI \
+    aptxalsOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
