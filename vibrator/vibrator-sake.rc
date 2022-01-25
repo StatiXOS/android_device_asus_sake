@@ -1,0 +1,4 @@
+service vendor.vibrator-sake /vendor/bin/hw/android.hardware.vibrator-service.sake
+    class hal
+    user system
+    group system input

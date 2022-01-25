@@ -1,44 +1,38 @@
-Common_CFlags = ["-Wall"]
-Common_CFlags += ["-Werror"]
+// Copyright (C) 2022 StatiX
+// SPDX-License-Identifer: Apache-2.0
 
-cc_library_shared {
-    name: "vendor.qti.hardware.vibrator.impl.sake",
+cc_library_static {
+    name: "libvibratorsakeimpl",
     vendor: true,
-    cflags: Common_CFlags,
-    srcs: [
-        "Vibrator.cpp",
-    ],
     shared_libs: [
         "libbase",
-        "libcutils",
-        "libutils",
-        "liblog",
-        "libqtivibratoreffect",
         "libbinder_ndk",
-        "android.hardware.vibrator-V1-ndk_platform",
+        "android.hardware.vibrator-V2-ndk_platform",
     ],
-    export_include_dirs: ["include"]
+    export_include_dirs: ["include"],
+    srcs: [
+        "Vibrator.cpp",
+        "VibratorManager.cpp",
+    ],
+    visibility: [
+        ":__subpackages__",
+        "//hardware/interfaces/tests/extension/vibrator:__subpackages__",
+    ],
 }
 
 cc_binary {
-    name: "vendor.qti.hardware.vibrator.service.sake",
-    vendor: true,
+    name: "android.hardware.vibrator-service.sake",
     relative_install_path: "hw",
-    init_rc: ["vendor.qti.hardware.vibrator.service.sake.rc"],
-    vintf_fragments: [
-        "vendor.qti.hardware.vibrator.service.sake.xml",
-    ],
-    cflags: Common_CFlags,
-    srcs: [
-        "service.cpp",
-    ],
+    init_rc: ["vibrator-sake.rc"],
+    vintf_fragments: ["vibrator-sake.xml"],
+    vendor: true,
     shared_libs: [
-        "libcutils",
-        "libutils",
         "libbase",
         "libbinder_ndk",
-        "android.hardware.vibrator-V1-ndk_platform",
-        "vendor.qti.hardware.vibrator.impl.sake",
+        "android.hardware.vibrator-V2-ndk_platform",
     ],
-    overrides: ["vendor.qti.hardware.vibrator.service"],
+    static_libs: [
+        "libvibratorsakeimpl",
+    ],
+    srcs: ["main.cpp"],
 }
