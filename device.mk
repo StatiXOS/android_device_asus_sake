@@ -122,7 +122,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 PRODUCT_PACKAGES += \
-    Snap \
     android.hardware.camera.provider@2.5-service_64 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
@@ -151,8 +150,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.qti \
     libtinyxml \
-    lights.qcom \
-    vendor.lineage.livedisplay@2.0-service-sdm
+    lights.qcom
 
 # Fastboot
 PRODUCT_PACKAGES += \
@@ -262,7 +260,7 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-statix
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
@@ -275,13 +273,16 @@ PRODUCT_PACKAGES += \
     WifiResTarget \
     ZenFone8Frameworks \
     ZenFone8SettingsProvider \
-    ZenFone8Snap \
     ZenFone8SystemUI \
     ZenFone8Telephony \
     aptxalsOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Platform
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := lahaina
 
 # Performance
 PRODUCT_PACKAGES += \
@@ -313,9 +314,6 @@ PRODUCT_PACKAGES += \
 # Security
 BOOT_SECURITY_PATCH := 2021-11-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
-
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # Sensors
 PRODUCT_COPY_FILES += \
