@@ -4,15 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-on fs
-    # Haptics
-    chown system system /sys/class/leds/vibrator/duration
-    chown system system /sys/class/leds/vibrator/vmax
-    chown system system /sys/class/leds/vibrator/gain
-    chown system system /sys/class/leds/vibrator/seq
-    chown system system /sys/class/leds/vibrator/loop
-    chown system system /sys/class/leds/vibrator/brightness
-
 on post-fs-data
     # Audio
     chown system audio /mnt/vendor/persist/audio/rcv_cal_val
@@ -83,6 +74,7 @@ on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
 on property:ro.boot.country_code=JP
     # NFC
     setprop ro.boot.product.hardware.sku eSE
+    start vendor.secure_element_hal_service_1_2
 
 on property:sys.boot_completed=1
     # Camera
@@ -132,3 +124,24 @@ service vendor.camera-provider-2-5 /vendor/bin/hw/android.hardware.camera.provid
     ioprio rt 4
     capabilities SYS_NICE
     writepid /dev/cpuset/camera-daemon/tasks /dev/stune/foreground/tasks
+
+service vendor.secure_element_hal_service_1_2 /vendor/bin/hw/android.hardware.secure_element@1.2-service.p73
+    class hal
+    override
+    disabled
+    interface android.hardware.secure_element@1.0::ISecureElement eSE1
+    interface android.hardware.secure_element@1.1::ISecureElement eSE1
+    interface android.hardware.secure_element@1.2::ISecureElement eSE1
+    interface vendor.nxp.nxpese@1.0::INxpEse default
+    interface vendor.nxp.eventprocessor@1.0::INxpEseEvtProcessor default
+    user secure_element
+    group secure_element
+
+service vendor.sensors-hal-2-1-multihal /vendor/bin/hw/android.hardware.sensors@2.1-service.multihal
+    override
+    class hal
+    user system
+    group system wakelock context_hub input
+    writepid /dev/cpuset/system-background/tasks
+    capabilities BLOCK_SUSPEND
+    rlimit rtprio 10 10
