@@ -150,6 +150,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.qti \
+    libdisplayconfig.qti \
     libtinyxml \
     lights.qcom
 
