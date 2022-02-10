@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017-2022 The Android Open Source Project
+ * Copyright (C) 2017 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,8 +18,6 @@
 
 #include <hardware/hw_auth_token.h>
 
-#include <android-base/file.h>
-#include <android-base/properties.h>
 #include <hardware/hardware.h>
 #include <hardware/fingerprint.h>
 #include "BiometricsFingerprint.h"
@@ -33,9 +31,6 @@
 #define CMD_LIGHT_AREA_STABLE 200002
 #define CMD_PARTIAL_FINGER_DETECTED 200004
 
-#define GLOBAL_HBM_PATH "/proc/globalHbm"
-#define GLOBAL_HBM_ON "1"
-#define GLOBAL_HBM_OFF "0"
 
 namespace android {
 namespace hardware {
@@ -83,9 +78,6 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
     this->mGoodixFingerprintDaemon->sendCommand(CMD_FINGER_DOWN, {},
                                                 [](int, const hidl_vec<signed char>&) {});
-    if (!android::base::WriteStringToFile(GLOBAL_HBM_ON, GLOBAL_HBM_PATH)) {
-        ALOGE("Failed to write to %s", GLOBAL_HBM_PATH);
-    }
     this->mGoodixFingerprintDaemon->sendCommand(CMD_LIGHT_AREA_STABLE, {},
                                                 [](int, const hidl_vec<signed char>&) {});
 
@@ -93,9 +85,6 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
-    if (!android::base::WriteStringToFile(GLOBAL_HBM_OFF, GLOBAL_HBM_PATH)) {
-        ALOGE("Failed to write to %s", GLOBAL_HBM_PATH);
-    }
     this->mGoodixFingerprintDaemon->sendCommand(CMD_FINGER_UP, {},
                                                 [](int, const hidl_vec<signed char>&) {});
 
@@ -250,21 +239,11 @@ IBiometricsFingerprint* BiometricsFingerprint::getInstance() {
     return sInstance;
 }
 
-const char* BiometricsFingerprint::getModuleId() {
-    auto stageId = android::base::GetIntProperty("ro.boot.id.stage", 0);
-
-    if (stageId == 52) {
-        return "fingerprint_er1.default";
-    }
-
-    return FINGERPRINT_HARDWARE_MODULE_ID;
-}
-
 fingerprint_device_t* BiometricsFingerprint::openHal() {
     int err;
     const hw_module_t *hw_mdl = nullptr;
     ALOGD("Opening fingerprint hal library...");
-    if (0 != (err = hw_get_module(getModuleId(), &hw_mdl))) {
+    if (0 != (err = hw_get_module(FINGERPRINT_HARDWARE_MODULE_ID, &hw_mdl))) {
         ALOGE("Can't open fingerprint HW Module, error: %d", err);
         return nullptr;
     }
