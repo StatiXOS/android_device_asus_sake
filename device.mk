@@ -43,6 +43,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_io_policy.conf \
     $(LOCAL_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_platform_info_intcodec.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_policy_configuration.xml \
@@ -77,6 +78,16 @@ PRODUCT_PACKAGES += \
     libspkrprot \
     libssrec \
     libvolumelistener \
+    libeffectproxy \
+    libdynproc \
+    libdownmix \
+    libbundlewrapper \
+    libaudiopreprocessing \
+    libldnhncr \
+    libvisualizer \
+    libreverbwrapper \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
     sound_trigger.primary.lahaina
 
 # Authsecret
@@ -137,6 +148,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service_64 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
+
+# Dirac
+PRODUCT_PACKAGES += \
+    ASUSDiracGef
 
 # DRM
 PRODUCT_PACKAGES += \
