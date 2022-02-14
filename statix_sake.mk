@@ -4,14 +4,25 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from those products. Most specific first.
+# All components inherited here go to the system image.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
 
-# Inherit from the device configuration.
+# All components inherited here go to the system_ext image.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
+
+# All components inherited here go to the product image.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
+
+# All components inherited here go to the vendor image.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
+
+# All components inherited here are for the device specific configuration.
 $(call inherit-product, device/asus/sake/device.mk)
 
-# Inherit some common StatiX stuff.
+# All components inherited here are for the StatiX specific configuration.
 $(call inherit-product, vendor/statix/config/common.mk)
 $(call inherit-product, vendor/statix/config/gsm.mk)
 
