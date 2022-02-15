@@ -41,26 +41,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
-# Artifact Path Requirements
-override _base_mk_allowed_list := \
-    system_ext/etc/bluetooth/bt_configstore.conf \
-    system_ext/etc/bluetooth/bt_profile.conf \
-    system_ext/etc/bluetooth/interop_database.conf \
-    system_ext/lib/com.qualcomm.qti.bluetooth_audio@1.0.so \
-    system_ext/lib/libbluetooth_qti.so \
-    system_ext/lib/libbtconfigstore.so \
-    system_ext/lib/vendor.qti.hardware.bluetooth_audio@2.0.so \
-    system_ext/lib/vendor.qti.hardware.bluetooth_audio@2.1.so \
-    system_ext/lib/vendor.qti.hardware.btconfigstore@1.0.so \
-    system_ext/lib/vendor.qti.hardware.btconfigstore@2.0.so \
-    system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so \
-    system_ext/lib64/libbluetooth_qti.so \
-    system_ext/lib64/libbtconfigstore.so \
-    system_ext/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so \
-    system_ext/lib64/vendor.qti.hardware.bluetooth_audio@2.1.so \
-    system_ext/lib64/vendor.qti.hardware.btconfigstore@1.0.so \
-    system_ext/lib64/vendor.qti.hardware.btconfigstore@2.0.so
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_effects.xml \
