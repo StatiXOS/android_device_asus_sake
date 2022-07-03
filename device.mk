@@ -158,6 +158,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.supports_background_blur=1
 
+# DTBO
+PRODUCT_HOST_PACKAGES += mkdtimg
+
 # Fastboot
 PRODUCT_PACKAGES += \
     fastbootd
@@ -209,6 +212,16 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.asus.rc \
     ueventd.qcom.rc
+
+# Kernel
+PRODUCT_VENDOR_KERNEL_HEADERS := device/asus/sake-kernel/kernel-headers
+
+TARGET_KERNEL_DIR ?= device/asus/sake-kernel
+LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
+BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_DIR)
+BOARD_PREBUILT_DTBOIMAGE := $(BOARD_PREBUILT_DTBIMAGE_DIR)/dtbo.img
+
+PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
 
 # Keymaster
 PRODUCT_COPY_FILES += \
