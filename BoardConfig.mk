@@ -120,11 +120,15 @@ BOARD_RAMDISK_USE_LZ4 := true
 
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
-KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
-KERNEL_LD := LD=$(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin/aarch64-elf-ld.bfd
-TARGET_KERNEL_CONFIG := vendor/$(PRODUCT_DEVICE)_defconfig
-TARGET_KERNEL_SOURCE := kernel/asus/sm8350
+PRODUCT_VENDOR_KERNEL_HEADERS := device/asus/sake-kernel/kernel-headers
+
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := device/asus/sake-kernel/vendor_dlkm.blocklist
+
+KERNEL_MODULE_DIR := $(TARGET_KERNEL_DIR)
+KERNEL_MODULES := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
+
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_MODULE_DIR)/modules.load))
+BOARD_VENDOR_KERNEL_MODULES := $(KERNEL_MODULES)
 
 # Partitions
 BOARD_ASUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
@@ -159,6 +163,10 @@ ENABLE_VENDOR_RIL_SERVICE := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOOT_KERNEL_MODULES := \
+    $(TARGET_KERNEL_DIR)/focaltech_fts_zf.ko \
+    $(TARGET_KERNEL_DIR)/msm_drm.ko \
+    $(TARGET_KERNEL_DIR)/sensors_vcnl36866.ko
 
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888

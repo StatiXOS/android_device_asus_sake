@@ -210,6 +210,12 @@ PRODUCT_PACKAGES += \
     ueventd.asus.rc \
     ueventd.qcom.rc
 
+# Kernel
+TARGET_KERNEL_DIR ?= device/asus/sake-kernel
+LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
+
+PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
+
 # Keymaster
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
