@@ -18,6 +18,24 @@
       "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aae64f0f_5eb61c0b",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2022-07-06T13:11:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "53c80ad3_a80cb981",
+      "revId": "0ae0c809a2d8c959883e43f2d6a0338b243429b5",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5d498720_fbd3cc56",
@@ -35,6 +53,24 @@
       "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "400a83bc_c3373228",
+        "filename": "device.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2022-07-06T13:11:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5d498720_fbd3cc56",
+      "revId": "0ae0c809a2d8c959883e43f2d6a0338b243429b5",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e24951ff_eac4337f",
@@ -48,6 +84,24 @@
       "writtenOn": "2022-07-06T05:06:39Z",
       "side": 1,
       "message": "add sake-kernel to deps",
+      "revId": "0ae0c809a2d8c959883e43f2d6a0338b243429b5",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96bb38bd_17acac0e",
+        "filename": "statix.dependencies",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2022-07-06T13:11:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e24951ff_eac4337f",
       "revId": "0ae0c809a2d8c959883e43f2d6a0338b243429b5",
       "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
     }
