@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53c80ad3_a80cb981",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-06T05:06:39Z",
+      "side": 1,
+      "message": "is this needed?",
+      "revId": "0ae0c809a2d8c959883e43f2d6a0338b243429b5",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d498720_fbd3cc56",
+        "filename": "device.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-06T05:06:39Z",
+      "side": 1,
+      "message": "use +\u003d so you don\u0027t accidentally override qc headers, seems like a potential race",
+      "revId": "0ae0c809a2d8c959883e43f2d6a0338b243429b5",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e24951ff_eac4337f",
+        "filename": "statix.dependencies",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-06T05:06:39Z",
+      "side": 1,
+      "message": "add sake-kernel to deps",
+      "revId": "0ae0c809a2d8c959883e43f2d6a0338b243429b5",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    }
+  ]
+}
