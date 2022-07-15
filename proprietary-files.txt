@@ -1586,11 +1586,11 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
-# Thermal - From LA.UM.9.14.r1-18900-LAHAINA.0
-vendor/bin/thermal-engine|5277ecc7ebe546ada15dd97f6d076e62fb0d95b0
-vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
-vendor/lib/libthermalclient.so|6ed686c6c39546a7bf532767f6d87808a42b1176
-vendor/lib64/libthermalclient.so|19863c5bd63733bc3b2260847fc9c3d512597936
+# Thermal
+vendor/bin/thermal-engine
+vendor/etc/init/init_thermal-engine.rc
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
 
 # Time Services
 vendor/app/TimeService/TimeService.apk
