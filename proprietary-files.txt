@@ -1589,9 +1589,9 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|ca9d2f2cf5b1dd49bdcee560e790c53e317b102a
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|ae0d677b1cd2f4f46b8f15416497684e94b2108d
 
-# TFTP
-vendor/bin/tftp_server
-vendor/etc/init/vendor.qti.tftp.rc
+# TFTP (LA.UM.9.14.r1-20200-LAHAINA.QSSI13.0)
+vendor/bin/tftp_server|60c781fe00d1bb4adc66f5224579d413dd953490
+vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
 
 # Thermal
 vendor/bin/thermal-engine
