@@ -1245,11 +1245,11 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|668fa46809fba01ab1e0f7af8e8457d94b
 # Public Libraries
 vendor/etc/public.libraries.txt
 
-# QCV
-vendor/bin/init.qti.qcv.sh
-vendor/etc/init/init.qti.qcv.rc
-vendor/lib64/libsoc_helper.so
-vendor/lib64/libsoc_helper_jni.so
+# QCV (LA.UM.9.14.r1-20200-LAHAINA.QSSI13.0)
+vendor/bin/init.qti.qcv.sh|355a70cde39583a7f2a07441ba5ab1ed4d7feb18
+vendor/etc/init/init.qti.qcv.rc|1d0cff5660bdf7abc22ac2b960a0dcd88404d740
+vendor/lib64/libsoc_helper.so|1a76b2e9151c6bf3a0576999b4ca9fa2e65da6ed
+vendor/lib64/libsoc_helper_jni.so|e58ddb6b27e4d7fd215adbbd05165f1dccdd0f05
 
 # QCRIL
 system_ext/app/QtiTelephony/QtiTelephony.apk
