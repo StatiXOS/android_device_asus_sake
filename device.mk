@@ -14,7 +14,7 @@ $(call inherit-product, vendor/asus/sake/sake-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
-PRODUCT_RO_FILE_SYSTEM ?= ext4
+PRODUCT_RO_FILE_SYSTEM ?= erofs
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
