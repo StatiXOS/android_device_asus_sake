@@ -626,8 +626,8 @@ vendor/lib64/camera/com.qti.sensormodule.imx663_s.bin
 vendor/lib64/camera/com.qti.sensormodule.imx686_16m_s.bin
 vendor/lib64/camera/com.qti.sensormodule.imx686_s.bin
 vendor/lib64/camera/com.qti.tuned.default.bin
-vendor/lib64/camera/com.qti.tuned.imx363.bin
-vendor/lib64/camera/com.qti.tuned.imx663.bin
+vendor/lib64/camera/com.qti.tuned.imx363.bin|6f4cea8762a209452ea9c970a356325e3d05b855
+vendor/lib64/camera/com.qti.tuned.imx663.bin|d4355d0de5426093c8220645eca40d644048a590
 vendor/lib64/camera/com.qti.tuned.imx686.bin
 vendor/lib64/camera/dut_IMX363_S.bin
 vendor/lib64/camera/dut_IMX663_S.bin
