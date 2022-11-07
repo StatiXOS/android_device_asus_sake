@@ -125,6 +125,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.bluetooth.library_name=libbluetooth_qti.so
 endif
 
+# Blur
+TARGET_USES_BLUR := true
+
 # Boot Control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
@@ -177,9 +180,6 @@ PRODUCT_PACKAGES += \
     android.hardware.lights-service.qti \
     libtinyxml \
     lights.qcom
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.supports_background_blur=1
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.sf.blurs_are_expensive=1
 
 # Fastboot
 PRODUCT_PACKAGES += \
