@@ -313,8 +313,7 @@ PRODUCT_PACKAGES += \
     ZenFone8Settings \
     ZenFone8SettingsProvider \
     ZenFone8SystemUI \
-    ZenFone8Telephony \
-    aptxalsOverlay
+    ZenFone8Telephony
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
