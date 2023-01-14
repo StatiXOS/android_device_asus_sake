@@ -281,12 +281,6 @@ vendor/lib/rfsa/adsp/libdirac-capiv2.so
 vendor/lib/soundfx/libdiraceffect.so
 vendor/lib/libdiracgefwrapper.so
 
-# Bluetooth - AptX
-system_ext/app/aptxacu/aptxacu.apk
-system_ext/app/aptxui/aptxui.apk
-system_ext/etc/permissions/privapp-permissions-aptxals.xml
-system_ext/priv-app/aptxals/aptxals.apk
-
 # Bluetooth - General (LA.UM.9.14.r1-20200-LAHAINA.QSSI13.0)
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|d6dc2016e466fa1af75fdf87687cb7d0da4b6922
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
