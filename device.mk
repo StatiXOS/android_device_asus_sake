@@ -313,6 +313,7 @@ PRODUCT_PACKAGES += \
     ZenFone8Settings \
     ZenFone8SettingsProvider \
     ZenFone8SystemUI \
+    SettingsOverlayZ590KS \
     ZenFone8Telephony
 
 # Partitions
