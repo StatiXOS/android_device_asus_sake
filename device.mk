@@ -313,6 +313,7 @@ PRODUCT_PACKAGES += \
     ZenFone8Settings \
     ZenFone8SettingsProvider \
     ZenFone8SystemUI \
+    ZenFone8Regulatory \
     ZenFone8Telephony
 
 # Partitions
