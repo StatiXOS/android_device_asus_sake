@@ -227,6 +227,7 @@ PRODUCT_PACKAGES += \
     init.asus.usb.rc \
     init.class_main.sh \
     init.qcom.early_boot.sh \
+    init.lahaina.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
     init.target.rc \
