@@ -42,6 +42,7 @@ vendor.camera.undistortion.video=4:0;1:0;2:0;3:0;5:0
 # Display
 debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-2000000
+ro.surface_flinger.set_display_power_timer_ms=1000
 
 # QC Value Addons
 ro.vendor.qti.va_odm.support=1
