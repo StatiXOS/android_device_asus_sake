@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from ZenFone 8 (33.0210.0210.210). OTAs to extract from can be found here:
+## are from ZenFone 8 (33.0210.0210.269). OTAs to extract from can be found here:
 ## https://www.asus.com/Mobile/Phones/ZenFone/Zenfone-8/HelpDesk_BIOS/
 
 # ADSPRPC
@@ -445,26 +445,26 @@ system/lib64/libxditk_ditArchLIB.so|6f14bd4d3c4ec5990f99905b006b282388ad51eb
 system/lib64/libxditk_ditBSP.so|b3bbbbb820318496701b740098004c7dd4cd1d77
 system/lib64/libxditk_ditBSP_JNI.so|0b1495bb4d21392d1dc37ed044139c4c770c7941
 system/lib64/style.cng|a4061be15c8faed59f3e77444deb6ed969b3df9b
-system/priv-app/AsusCameraApp/lib/arm64/libMNN.so|942cae55a554499671ae025cdfa879fec387d464
-system/priv-app/AsusCameraApp/lib/arm64/libUndistort.so|062e7b506cf65c48a1d4ab17028219ae74295c34
-system/priv-app/AsusCameraApp/lib/arm64/libarcsoft_object_tracking.so|ce36cc5239f34eb986bc95e86c16ddcff4a39eaa
-system/priv-app/AsusCameraApp/lib/arm64/libarcsoft_panorama_burstcapture.so|c3930ba405b615346e7469bea698653404dbb70a
-system/priv-app/AsusCameraApp/lib/arm64/libarcsoft_panorama_interval_capture.so|5f94be5c073d903ba70f3e46d6be9674b36ccb4e
-system/priv-app/AsusCameraApp/lib/arm64/libarcsoft_portrait_distortion_correction_zf7.so|cf8523d8a05d98c8809d56e4fb527540f57c4ca4
-system/priv-app/AsusCameraApp/lib/arm64/libasus_camera_interval_panorama.so|f64b8bbefea387e93124e1cbc60db52dcf87c0f6
-system/priv-app/AsusCameraApp/lib/arm64/libasus_camera_object_tracking.so|b73de1a5ccfbf264b489c6188863f20c4a77c9ca
-system/priv-app/AsusCameraApp/lib/arm64/libasus_camera_panorama.so|50714d36c16ed1e372cdc24ce2802901addff66f
-system/priv-app/AsusCameraApp/lib/arm64/libasusundistort.so|e2982f0d403b4ad95ea365b1b522d579a65defe1
-system/priv-app/AsusCameraApp/lib/arm64/libbarhopper_v3.so|156387210e424f30d2642edeff2a549d77808abd
-system/priv-app/AsusCameraApp/lib/arm64/libbitmap.so|0ce05431a6f24756183c9739e1f57c3930a224ab
-system/priv-app/AsusCameraApp/lib/arm64/libmainstone.so|535a855cb00e9a278d31ca3162618e0644e3878c
-system/priv-app/AsusCameraApp/lib/arm64/libmpbase.so|4c73906238b838c55d3b750f4b41da352a0aa81b
-system/priv-app/AsusCameraApp/lib/arm64/librenderscript-toolkit.so|c2f75e25ab86d808ba811112aeda1de80c879e2a
-system/priv-app/AsusCameraApp/lib/arm64/libscanner.so|89fb7a252fafb7780ebe9c1e2a80a5d09e299198
-system/priv-app/AsusCameraApp/lib/arm64/libtensorflowlite_jni.so|69f9a3b2f0474a5d2753b7cab2eb48b51ccdbae9
-system/priv-app/AsusCameraApp/lib/arm64/libyuv_camera.so|360c2810ccc2fe9adeb523f0cb77446a4ff2274a
-system/priv-app/AsusCameraApp/lib/arm64/libyuv_util.so|cd7ec3a63c9b31bbe1200d44af551d4d0a55dfc5
--system/priv-app/AsusCameraApp/AsusCameraApp.apk;OVERRIDES=Camera2,GoogleCameraGo;PRESIGNED
+system/priv-app/AsusCamera/lib/arm64/libMNN.so|942cae55a554499671ae025cdfa879fec387d464
+system/priv-app/AsusCamera/lib/arm64/libUndistort.so|062e7b506cf65c48a1d4ab17028219ae74295c34
+system/priv-app/AsusCamera/lib/arm64/libarcsoft_object_tracking.so|ce36cc5239f34eb986bc95e86c16ddcff4a39eaa
+system/priv-app/AsusCamera/lib/arm64/libarcsoft_panorama_burstcapture.so|c3930ba405b615346e7469bea698653404dbb70a
+system/priv-app/AsusCamera/lib/arm64/libarcsoft_panorama_interval_capture.so|5f94be5c073d903ba70f3e46d6be9674b36ccb4e
+system/priv-app/AsusCamera/lib/arm64/libarcsoft_portrait_distortion_correction_zf7.so|cf8523d8a05d98c8809d56e4fb527540f57c4ca4
+system/priv-app/AsusCamera/lib/arm64/libasus_camera_interval_panorama.so|f64b8bbefea387e93124e1cbc60db52dcf87c0f6
+system/priv-app/AsusCamera/lib/arm64/libasus_camera_object_tracking.so|b73de1a5ccfbf264b489c6188863f20c4a77c9ca
+system/priv-app/AsusCamera/lib/arm64/libasus_camera_panorama.so|50714d36c16ed1e372cdc24ce2802901addff66f
+system/priv-app/AsusCamera/lib/arm64/libasusundistort.so|e2982f0d403b4ad95ea365b1b522d579a65defe1
+system/priv-app/AsusCamera/lib/arm64/libbarhopper_v3.so|156387210e424f30d2642edeff2a549d77808abd
+system/priv-app/AsusCamera/lib/arm64/libbitmap.so|0ce05431a6f24756183c9739e1f57c3930a224ab
+system/priv-app/AsusCamera/lib/arm64/libmainstone.so|535a855cb00e9a278d31ca3162618e0644e3878c
+system/priv-app/AsusCamera/lib/arm64/libmpbase.so|4c73906238b838c55d3b750f4b41da352a0aa81b
+system/priv-app/AsusCamera/lib/arm64/librenderscript-toolkit.so|c2f75e25ab86d808ba811112aeda1de80c879e2a
+system/priv-app/AsusCamera/lib/arm64/libscanner.so|9af144bda8297cd6ceca37616facc85dcedd35c7
+system/priv-app/AsusCamera/lib/arm64/libtensorflowlite_jni.so|69f9a3b2f0474a5d2753b7cab2eb48b51ccdbae9
+system/priv-app/AsusCamera/lib/arm64/libyuv_camera.so|360c2810ccc2fe9adeb523f0cb77446a4ff2274a
+system/priv-app/AsusCamera/lib/arm64/libyuv_util.so|cd7ec3a63c9b31bbe1200d44af551d4d0a55dfc5
+-system/priv-app/AsusCamera/AsusCamera.apk;OVERRIDES=Camera2,GoogleCameraGo;PRESIGNED
 
 # Camera (Gallery) - from 33.0210.0210.210
 system/etc/videoeditor/Charming.mfim|4c50c5d8bc7d98f3f87a1b286b7d30b7d732acb9
