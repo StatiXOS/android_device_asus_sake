@@ -335,8 +335,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/privapp-permissions-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-asus.xml
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+$(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
 
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)

@@ -1242,9 +1242,6 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
-# Power
-vendor/etc/powerhint.xml
-
 # Power Off Alarm (LA.UM.9.14.1.r1-09400-QCM6490.QSSI13.0)
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|938b7d3b9b9ba604f57b81de51b5f580ff2c4cb9
 vendor/bin/power_off_alarm|1cb84df441f0b24da70797b61e3891912aab36dc
