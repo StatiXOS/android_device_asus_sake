@@ -337,6 +337,8 @@ PRODUCT_COPY_FILES += \
 # Power
 $(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
 
+PRODUCT_COPY_FILES += vendor/qcom/opensource/power/config/lahaina/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
