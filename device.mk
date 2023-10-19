@@ -357,7 +357,8 @@ DISABLE_COLUMBUS := true
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
+    android.hardware.radio.deprecated@1.0.vendor \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # Security
 BOOT_SECURITY_PATCH := 2023-05-05
