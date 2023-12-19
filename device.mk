@@ -353,6 +353,10 @@ PRODUCT_PACKAGES += \
 # QuickTap
 DISABLE_COLUMBUS := true
 
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
