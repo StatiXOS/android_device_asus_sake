@@ -1,7 +1,7 @@
 [
   {
-    "remote":      "stx-gitlab",
-    "repository":  "android_vendor_asus_sake",
+    "remote":      "gitea",
+    "repository":  "sourajitk/sake-vendor",
     "target_path": "vendor/asus/sake"
   },
   {
