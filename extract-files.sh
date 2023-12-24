@@ -67,7 +67,7 @@ function blob_fixup() {
         ;;
 
     # Patch any old blobs that depend on libprotobuf-lite.
-    vendor/lib64/*.so)
+    vendor/lib64/*.so | vendor/lib64/bin/sensors.qti)
         "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
         ;;
     esac
