@@ -1183,7 +1183,6 @@ vendor/etc/perf/commonresourceconfigs.xml|c03bd36054bb5d327ad12dc711b58b3f658d26
 vendor/etc/perf/perfboostsconfig.xml|8e4e7a0eca8040e600b2f65a38d3b6ca017a26ff
 vendor/etc/perf/perfconfigstore.xml|898fb3eedead0e3b5edab4e9b90b342546f7c1aa
 vendor/etc/perf/targetconfig.xml|601743de3ae21db289862f6972dbd7088197acd8
-vendor/etc/perf/targetresourceconfigs.xml|6447c05b552dbea7492b6cf28082a8d33996ec0a
 vendor/etc/pwr/PowerFeatureConfig.xml|eea5f8e28ab3893235315db5bdeddf811e155707
 vendor/etc/pwr/VideoPowerOptFeature.xml|0f80c2f1dc7603e70c7e9fcd0f20696955d6f4a5
 vendor/etc/task_profiles.json|e53e07c77a06fd3b888629868d0b400e696d9640
