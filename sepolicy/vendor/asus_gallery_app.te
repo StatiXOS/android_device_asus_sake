@@ -1,3 +1,0 @@
-binder_call(asus_gallery_app, vendor_hal_qspmhal_default)
-
-get_prop(asus_gallery_app, vendor_camera_prop)
